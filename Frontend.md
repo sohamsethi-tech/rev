@@ -73,3 +73,56 @@ export default App;
 
 rule in jsx me html me tera kya hota h <div class="container"></div>  theek h ye tera hota h html me aab tera react me hoga <div className="container"></div> bas kuch ni className lagate h hum className="container" kyu likhte hain?
 Taaki hum CSS ke through us particular div ko style kar sakein theek h samjhaaa
+/////////
+
+aab aa jate h components wagrah per 
+
+component ek reusable peice of ui hota h jise hum baar baar use kr skte h
+
+ek website banani h humne theek h aab tune components ka kaam dekh
+
+function App(){
+    return(
+        <div>
+         <h1>Shoes</h1>
+            <p>Price: ₹2000</p>
+
+            <h1>Watch</h1>
+            <p>Price: ₹3000</p>
+
+            <h1>Phone</h1>
+            <p>Price: ₹20000</p>
+        </div>
+    )
+}
+
+
+aab ye to teri kya ho gyi simple declatrion tune har object uthaya ek ek krke likha bc ye to bahot lamba ho jayega
+
+iske liye with components dekh aab:
+function hi(){
+    return(
+        h2>Product Name</h2>
+            <p>Product Price</p>
+        </div>
+    )
+}
+function hey(){
+    return(
+        <div>
+        <hi>
+        <hi> aab idhar hi tera product card ban jayega theek h na samjh gya 
+        <hi>
+         </div>
+    )
+}
+aaaab tune agar import krna h function koi to kya karega like
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+function hi(){
+    return(
+        <Navbar />
+        aur fir ese hi aayega <Footer /> bhi
+
+    )
+}
