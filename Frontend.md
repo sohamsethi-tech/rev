@@ -126,3 +126,122 @@ function hi(){
 
     )
 }
+///parent aur child ka system soda dekhte h aab
+function Child(){
+    return <h2>I m Soham Sethi</h2>
+
+}
+function Parent(){
+    return(
+        <h1>I m Dinesh Sethi </h1>
+        <Child />
+    )
+}
+
+what does export default do?
+=> default export provide krta h
+component composition means multiple components combine krna
+
+props ke hota h parent se data recieve krna aab isko practically dekhte h
+===>State kya hoti hai?
+.......State ek aisa data hai jo component ke andar store hota hai aur change hone par UI ko update karta hai
+
+import {useState} from "react"
+function App(){ /// ye tera component h 
+    const [count,setCount]=useState(0);  /////// yaha tera count kya hoga current state value hogi aur setCount kya hoga tera state update krne wala function theek hh
+    return(
+        <>
+        <h1>Count:{count}</h1>
+        <button onClick={()=>{
+            setCount{count+1}
+        }>
+        Increase
+        </button>
+        </>
+    )
+
+}
+function handleClick(){
+    handleClick() is the function that executes when the event occurs.
+
+
+
+onClick is the event handler.
+
+
+
+{handleClick} passes the function to React.
+}
+
+function App(){
+    const[count,setCount]=useState(0);
+
+    function handleClick(){
+        setCount(count+1);
+    }
+    return (
+    <div>
+      <h1>{count}</h1>
+
+      <button onClick={handleClick}>
+        Increase
+      </button>
+    </div>
+  );
+}
+
+function handleClick(){
+    alert("hi");
+}
+<button onClick=()=>{
+handleClick
+}> hi  </button>
+
+
+///// 
+
+conditional rendering means displaying different ui elements depending on the condition .....
+
+
+function App(){
+    const isLoggedIn=true;
+    if(isLoggedIn){
+        ///what u waanna return u can like return( whatever u wwannna write here)
+    }
+}
+
+
+function App(){
+    const isLogIn=true;
+    return(
+        <>
+        {isLogIn?<h1>Dashboard</h1>:<h1>Login </h1>}
+        </>
+    )
+}
+
+function App() {
+
+  const students = [
+    { id: 1, name: "Soham", age: 20 },
+    { id: 2, name: "Rahul", age: 21 },
+    { id: 3, name: "Aman", age: 22 }
+  ];
+
+  return (
+    <div>
+      {students.map((student) => (
+        <div key={student.id}>
+          <h2>{student.name}</h2>
+          <p>{student.age}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default App;     //// see this code
+
+
+
+
